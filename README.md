@@ -33,13 +33,8 @@ This is a simple Node.js HTTP server that captures and displays the user's IP ad
         res.setHeader('Content-Type', 'text/plain');
 
         if (req.url === '/') {
-            if (userIp === '::1' || userIp === '127.0.0.1') {
-                res.statusCode = 200;
-                res.end(`You are accessing from localhost. IP address: ${userIp}`);
-            } else {
-                res.statusCode = 200;
-                res.end(`Your IP address is: ${userIp}`);
-            }
+            res.statusCode = 200;
+            res.end(`Your IP address is: ${userIp}`);
         } else {
             res.statusCode = 404;
             res.end('404 Not Found');
@@ -53,13 +48,16 @@ This is a simple Node.js HTTP server that captures and displays the user's IP ad
 
 2. Start the server by running:
     ```bash
-    node index.js
+    npm start
     ```
 
 3. Visit `http://localhost:3000/` in your browser to see your IP address. If you access any other route, you'll see the "404 Not Found" message.
 
 ## Testing Locally
 If you run the server locally (on your own machine), you'll likely see `::1` or `127.0.0.1` as the IP address, which represents the localhost.
+
+## Check Live Demo
+[Node.js IP Address Server Live](https://ipaddress-find.vercel.app/)
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).
