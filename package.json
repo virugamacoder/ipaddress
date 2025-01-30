@@ -1,0 +1,17 @@
+{
+  "name": "ipaddress",
+  "version": "1.0.0",
+  "description": "Ipadress Found",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "ipadress"
+  ],
+  "author": "virugamacoder",
+  "license": "ISC",
+  "dependencies": {
+    "request-ip": "^3.3.0"
+  }
+}
